@@ -1,8 +1,16 @@
+/******************  Universidad de las Fuerzas Armadas ESPE  ************************
+ *				Carrera: Software													 *
+ *				Autores:Isaac Escobar, Josue Ferrin,							     *
+ *				Fecha de creación: 05/10/2022										 *
+ *				Fecha de modificación: 07/02/2022									 *
+ *************************************************************************************/
+
 #ifndef FECHA_H_INCLUDED
 #define FECHA_H_INCLUDED
 
 #include<iostream>
 using namespace std;
+
 template<class P>
 class Pascal{
 public:
