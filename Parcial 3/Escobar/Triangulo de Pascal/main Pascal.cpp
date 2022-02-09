@@ -4,7 +4,7 @@
  *				Fecha de creación: 05/10/2022										 *
  *				Fecha de modificación: 07/02/2022									 *
  *************************************************************************************/
- #include<iostream>
+#include<iostream>
 #include "Pascal.h"
 using namespace std;
 

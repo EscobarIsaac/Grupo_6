@@ -19,8 +19,11 @@ public:
     combination(P,P);
     P combination();
     triangulo_Pascal();
+    int p;
 
 };
+
+
 template<class P>
 Pascal<P>::factorial(P n)
 {
@@ -29,6 +32,8 @@ Pascal<P>::factorial(P n)
     else
         return n * factorial(n-1);
 }
+
+
 template<class P>
 Pascal<P>::combination(P n, P r)
 {
