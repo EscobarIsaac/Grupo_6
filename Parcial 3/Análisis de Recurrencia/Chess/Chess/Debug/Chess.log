@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Usuario\Desktop\ESPE\Tercer Semestre\Estructura de datos\Codigos\Chess\Chess\main.cpp(16,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\ESPE\Tercer Semestre\Estructura de datos\Codigos\Chess\Chess\main.cpp(18,6): warning C4101: 'opc': variable local sin referencia
+  Chess.vcxproj -> C:\Users\Usuario\Desktop\ESPE\Tercer Semestre\Estructura de datos\Codigos\Chess\Debug\Chess.exe
