@@ -1,0 +1,65 @@
+\hypertarget{_encriptacion_md5_8h_source}{}\doxysection{Encriptacion\+Md5.\+h}
+\mbox{\hyperlink{_encriptacion_md5_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef MD5\_H }}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define MD5\_H }}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_include_8h}{Include.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/* Type define */}}
+\DoxyCodeLine{8 \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{_encriptacion_md5_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}};}
+\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{_encriptacion_md5_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}};}
+\DoxyCodeLine{10 \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using} std::string;}
+\DoxyCodeLine{13 \textcolor{keyword}{using} std::ifstream;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{/* MD5 declaration. */}}
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_m_d5}{MD5}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{MD5}}();}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{MD5}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* input, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{MD5}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str);}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{MD5}}(ifstream\& in);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_a9f1e36e28259a9402a3b1ab4ee5bb107}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* input, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_a9f1e36e28259a9402a3b1ab4ee5bb107}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_a9f1e36e28259a9402a3b1ab4ee5bb107}{update}}(ifstream\& in);}
+\DoxyCodeLine{66     \textcolor{keyword}{const} \textcolor{keywordtype}{byte}* \mbox{\hyperlink{class_m_d5_abd792b61ed363cc73a4921ac4dda7e1e}{digest}}();}
+\DoxyCodeLine{72     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_m_d5_a878da5c70a1c099c4d8daa9cc49a2787}{toString}}();}
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_ab54d46fc9348504b4530c73aefb00be1}{reset}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{keyword}{inline} \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} \mbox{\hyperlink{class_m_d5_a595b43550e5c8513c5830f672f4a553e}{rotate\_left}}(\mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} x, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{80     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_a31479b157441ace2dbc2ae0edd0d2e38}{FF}}(\mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}}\& a, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} b, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} c, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} d, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} x, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} s, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} ac);}
+\DoxyCodeLine{81     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_a8ebdbe52608e522516d1759a31753212}{GG}}(\mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}}\& a, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} b, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} c, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} d, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} x, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} s, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} ac);}
+\DoxyCodeLine{82     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_aaad039caf0b33abf1bf3f3589166543c}{HH}}(\mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}}\& a, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} b, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} c, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} d, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} x, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} s, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} ac);}
+\DoxyCodeLine{83     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_a7af0184654644964ecdb57b1203e5ec7}{II}}(\mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}}\& a, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} b, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} c, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} d, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} x, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} s, \mbox{\hyperlink{_encriptacion_md5_8h_a1ee29ba590ccc63c8b19d1dae350b86a}{uint4}} ac);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{keyword}{private}:}
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_d5_a9f1e36e28259a9402a3b1ab4ee5bb107}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{byte}* input, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \textcolor{keyword}{final}();}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} transform(\textcolor{keyword}{const} \textcolor{keywordtype}{byte} block[64]);}
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} encode(\textcolor{keyword}{const} \mbox{\hyperlink{_encriptacion_md5_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}}* input, \textcolor{keywordtype}{byte}* output, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} decode(\textcolor{keyword}{const} \textcolor{keywordtype}{byte}* input, \mbox{\hyperlink{_encriptacion_md5_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}}* output, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{91     \textcolor{keywordtype}{string} bytesToHexString(\textcolor{keyword}{const} \textcolor{keywordtype}{byte}* input, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \textcolor{comment}{/* class uncopyable */}}
+\DoxyCodeLine{94     \mbox{\hyperlink{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{MD5}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_m_d5}{MD5}}\&);}
+\DoxyCodeLine{95     \mbox{\hyperlink{class_m_d5}{MD5}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_m_d5}{MD5}}\&);}
+\DoxyCodeLine{96 \textcolor{keyword}{private}:}
+\DoxyCodeLine{97     \mbox{\hyperlink{_encriptacion_md5_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} \_state[4]; \textcolor{comment}{/* state (ABCD) */}}
+\DoxyCodeLine{98     \mbox{\hyperlink{_encriptacion_md5_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} \_count[2]; \textcolor{comment}{/* number of bits, modulo 2\string^64 (low-\/order word first) */}}
+\DoxyCodeLine{99     \textcolor{keywordtype}{byte} \_buffer[64]; \textcolor{comment}{/* input buffer */}}
+\DoxyCodeLine{100     \textcolor{keywordtype}{byte} \_digest[16]; \textcolor{comment}{/* message digest */}}
+\DoxyCodeLine{101     \textcolor{keywordtype}{bool} \_finished; \textcolor{comment}{/* calculate finished ? */}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{byte} PADDING[64]; \textcolor{comment}{/* padding for calculate */}}
+\DoxyCodeLine{104     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char} HEX[16];}
+\DoxyCodeLine{105     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} BUFFER\_SIZE = 1024;}
+\DoxyCodeLine{106 \};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{keywordtype}{string} \mbox{\hyperlink{_encriptacion_md5_8h_a5a8b5186a4bc09a1aafe75198eec9f27}{FileDigest}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& file);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#endif}\textcolor{comment}{/*MD5\_H*/}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,51 @@
+\hypertarget{_damas_chinas_8h_source}{}\doxysection{Damas\+Chinas.\+h}
+\mbox{\hyperlink{_damas_chinas_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include<stdlib.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include<time.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include<Windows.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{t__jugador_8h}{t\_jugador.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define MAXFILAS 17}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define MAXCOL 25}}
+\DoxyCodeLine{12 \textcolor{keyword}{using} std::cout;}
+\DoxyCodeLine{13 \textcolor{keyword}{using} std::string;}
+\DoxyCodeLine{14 \textcolor{keyword}{using} std::endl;}
+\DoxyCodeLine{15 \textcolor{keyword}{using} std::cin;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_damas_chinas}{DamasChinas}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_damas_chinas_aaff5f3465e0d6d4ea58d8d260e9afe43}{Mmapa}}, \mbox{\hyperlink{class_damas_chinas_a6c32d7584ae2a8764d65d4c52841e4fb}{matriz}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int}** \mbox{\hyperlink{class_damas_chinas_afafdff17eb33d1a933f9178a5167ef61}{Mcartel}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a7867e81cd373e141e723c31452e34189}{opcion}}, \mbox{\hyperlink{class_damas_chinas_a04c8512cc00c48d7bc61d72c2e9195e1}{volver}};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{char} \mbox{\hyperlink{class_damas_chinas_a67047819829a505a649a125856602ad6}{j1ficha}}, \mbox{\hyperlink{class_damas_chinas_af263e99903b180c55d32f55a9261af9f}{j2ficha}}, \mbox{\hyperlink{class_damas_chinas_a3a618909a6fb07a4141562b6e8991878}{auxficha}}, \mbox{\hyperlink{class_damas_chinas_a2c6804b41b70dfe17d55b73be203fd94}{aux}};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a06e2cc062261f6de3d8210ce2dd6479b}{i}}, \mbox{\hyperlink{class_damas_chinas_a314911e1e4a0be456a2febf61e5b8a7b}{j}}, \mbox{\hyperlink{class_damas_chinas_a05de3c6d029e95c9e329e5fbdb79df71}{dado1}}, \mbox{\hyperlink{class_damas_chinas_adebfada9d3bb93deaa869d3c85e37d04}{dado2}}, \mbox{\hyperlink{class_damas_chinas_a0810a1686409012625bf301cc4ae2b24}{turno}}, \mbox{\hyperlink{class_damas_chinas_a69c7d482d4ee5cd9e28bef451c6b269c}{coordx}}, \mbox{\hyperlink{class_damas_chinas_a69b672007253f21d22c69291d81e153b}{coordy}}, \mbox{\hyperlink{class_damas_chinas_a05bff114d0c714baa0e0fac9f64dc5f1}{destx}} = 0, \mbox{\hyperlink{class_damas_chinas_a56b48bbf84d0c343d22b30d15df079e1}{desty}} = 0, \mbox{\hyperlink{class_damas_chinas_af6fd5793dc33acc0371a42f570ecf092}{direccion}};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_damas_chinas_a6de577d17544c2ce2f6eacdb988ff5fa}{primerJugador}};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_damas_chinas_ab5df7254983c94b8d3b95e5f8a5c72ab}{jugador1}}, \mbox{\hyperlink{class_damas_chinas_abf19250a4f4c2fbc3934e9f26a536c7f}{jugador2}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_a8abdf38e5ece853308b07ca22def96ab}{generar\_mapa}}(\textcolor{keywordtype}{char}** \mbox{\hyperlink{class_damas_chinas_aaff5f3465e0d6d4ea58d8d260e9afe43}{Mmapa}});}
+\DoxyCodeLine{39     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_af35e73a24056cc58fbab09ba5a313eba}{dibujar\_mapa}}(\textcolor{keywordtype}{char}** \mbox{\hyperlink{class_damas_chinas_aaff5f3465e0d6d4ea58d8d260e9afe43}{Mmapa}});}
+\DoxyCodeLine{50     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_ae01ab5161d67d7e93ff7cda4a8a1f68d}{mover\_ficha}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a69c7d482d4ee5cd9e28bef451c6b269c}{coordx}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a69b672007253f21d22c69291d81e153b}{coordy}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a05bff114d0c714baa0e0fac9f64dc5f1}{destx}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a56b48bbf84d0c343d22b30d15df079e1}{desty}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_af6fd5793dc33acc0371a42f570ecf092}{direccion}}, \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_damas_chinas_aaff5f3465e0d6d4ea58d8d260e9afe43}{Mmapa}});}
+\DoxyCodeLine{56     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a8d6ecaab31d9784c9a3de62899546fe8}{menu}}();}
+\DoxyCodeLine{64     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_damas_chinas_a0685038c6eef445b70ef5471ca264ede}{victoria}}(\textcolor{keywordtype}{char}** \mbox{\hyperlink{class_damas_chinas_aaff5f3465e0d6d4ea58d8d260e9afe43}{Mmapa}});}
+\DoxyCodeLine{71     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_ad6b35a48a14c554c81fd96c9a48cdfee}{pedir\_datos}}(\mbox{\hyperlink{classt__jugador}{t\_jugador}}* Vjugadores);}
+\DoxyCodeLine{76     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_a48216a1717604a480c03b99e16c42b0e}{bienvenida}}();}
+\DoxyCodeLine{82     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_a0bb3529db2b04248e5a021663a28d32f}{generar\_cartel}}(\textcolor{keywordtype}{int}** \mbox{\hyperlink{class_damas_chinas_afafdff17eb33d1a933f9178a5167ef61}{Mcartel}});}
+\DoxyCodeLine{88     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_a25cc03016d0991f369ace8b8ef27f6f8}{dibujar\_cartel}}(\textcolor{keywordtype}{int}** \mbox{\hyperlink{class_damas_chinas_afafdff17eb33d1a933f9178a5167ef61}{Mcartel}});}
+\DoxyCodeLine{93     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_aecd96c0162608411399b073ce6c6a316}{instrucciones}}();}
+\DoxyCodeLine{98     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_a15ee30575bd661619a8f665a83674b3a}{creditos}}();}
+\DoxyCodeLine{103     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_a5a3aacc703f6198f1009bacf21d74521}{jugar}}();}
+\DoxyCodeLine{120     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_a7703579f43ac311c14f9540a480d13e1}{cargarPartida}}(\textcolor{keywordtype}{char}** \mbox{\hyperlink{class_damas_chinas_aaff5f3465e0d6d4ea58d8d260e9afe43}{Mmapa}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_a0810a1686409012625bf301cc4ae2b24}{turno}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_a69c7d482d4ee5cd9e28bef451c6b269c}{coordx}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_a69b672007253f21d22c69291d81e153b}{coordy}}, \textcolor{keywordtype}{char} \mbox{\hyperlink{class_damas_chinas_a67047819829a505a649a125856602ad6}{j1ficha}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_af6fd5793dc33acc0371a42f570ecf092}{direccion}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a05bff114d0c714baa0e0fac9f64dc5f1}{destx}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a56b48bbf84d0c343d22b30d15df079e1}{desty}}, \textcolor{keywordtype}{char} \mbox{\hyperlink{class_damas_chinas_af263e99903b180c55d32f55a9261af9f}{j2ficha}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_damas_chinas_a6de577d17544c2ce2f6eacdb988ff5fa}{primerJugador}}, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_damas_chinas_ab5df7254983c94b8d3b95e5f8a5c72ab}{jugador1}}, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_damas_chinas_abf19250a4f4c2fbc3934e9f26a536c7f}{jugador2}});}
+\DoxyCodeLine{137     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damas_chinas_adc883515292601a1d18d121ed10a8c8b}{guardarPartida}}(\textcolor{keywordtype}{char}** \mbox{\hyperlink{class_damas_chinas_aaff5f3465e0d6d4ea58d8d260e9afe43}{Mmapa}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_a0810a1686409012625bf301cc4ae2b24}{turno}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_a69c7d482d4ee5cd9e28bef451c6b269c}{coordx}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_a69b672007253f21d22c69291d81e153b}{coordy}}, \textcolor{keywordtype}{char} \mbox{\hyperlink{class_damas_chinas_a67047819829a505a649a125856602ad6}{j1ficha}}, \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_damas_chinas_af6fd5793dc33acc0371a42f570ecf092}{direccion}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a05bff114d0c714baa0e0fac9f64dc5f1}{destx}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_damas_chinas_a56b48bbf84d0c343d22b30d15df079e1}{desty}}, \textcolor{keywordtype}{char} \mbox{\hyperlink{class_damas_chinas_af263e99903b180c55d32f55a9261af9f}{j2ficha}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_damas_chinas_a6de577d17544c2ce2f6eacdb988ff5fa}{primerJugador}}, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_damas_chinas_ab5df7254983c94b8d3b95e5f8a5c72ab}{jugador1}}, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_damas_chinas_abf19250a4f4c2fbc3934e9f26a536c7f}{jugador2}});}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \};}
+\DoxyCodeLine{142 }
+
+\end{DoxyCode}

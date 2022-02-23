@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['object_5fiterator_0',['object_iterator',['../structnlohmann_1_1detail_1_1internal__iterator.html#a8cb0af3498061426c1d0a65ad6220408',1,'nlohmann::detail::internal_iterator']]],
+  ['opcion_1',['opcion',['../class_damas_chinas.html#a7867e81cd373e141e723c31452e34189',1,'DamasChinas']]]
+];

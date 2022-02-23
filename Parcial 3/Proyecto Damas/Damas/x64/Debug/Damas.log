@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Users\usuario\source\repos\Damas\Control.h(74): warning C4715: 'Control::comprobarMouse': no todas las rutas de acceso de control devuelven un valor
-  Damas.vcxproj -> C:\Users\usuario\source\repos\Damas\x64\Debug\Damas.exe

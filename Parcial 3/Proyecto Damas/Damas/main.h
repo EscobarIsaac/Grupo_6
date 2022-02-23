@@ -1,17 +1,55 @@
 #pragma once
 #include <Windows.h>
-#include<iostream>
 #include <thread>
-#include "main.h"
-
 #include "Control.h"
 #include <vector>
 #include <iostream>
 #include <iomanip>
 #include <sstream>
+#include "DamasChinas.h"
+#include "UserCredenciales.h"
+#include "json.hpp"
+#include <fstream>
 
+/**
+ * @brief 
+ * 
+ */
 void exit_program();
-void primerMenu();
-void placeholder();
+/**
+ * @brief 
+ * 
+ */
+void cargarJuego();
+/**
+ * @brief 
+ * 
+ */
+void principalMenu();
+/**
+ * @brief 
+ * 
+ */
+void jugar();
+/**
+ * @brief 
+ * 
+ * @param text 
+ * @param limit 
+ */
 void marquesina(std::string text, size_t limit);
-void AjustarVentana();
+/**
+ * @brief 
+ * 
+ */
+void ajustarVentana();
+/**
+ * @brief 
+ * 
+ */
+void logearse();
+/**
+ * @brief 
+ * 
+ */
+void registrarse();

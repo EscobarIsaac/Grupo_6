@@ -1,0 +1,147 @@
+\hypertarget{_control_8h_source}{}\doxysection{Control.\+h}
+\mbox{\hyperlink{_control_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vector_opc_8h}{VectorOpc.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <conio.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{_control_8h_a218425468491dce6fa91a807d4b06afa}{KEY\_UP}} = 72;}
+\DoxyCodeLine{10 \textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{_control_8h_a62f8a95dab37fb2b46a6e3fe21ca688c}{KEY\_DOWN}} = 80;}
+\DoxyCodeLine{11 \textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{_control_8h_ac120094f62b02a93c0275c75060a5d79}{KEY\_ENTER}} = 13;}
+\DoxyCodeLine{12 \textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{_control_8h_a7a0c7aa6236e724eeb762350a362025e}{KEY\_ESCAPE}} = 27;}
+\DoxyCodeLine{13 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_control_8h_afc5adfdd2cbcde08501799b57231eb8a}{SUP\_DER}} = 216;}
+\DoxyCodeLine{14 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_control_8h_a1eef70502c9b6582ab2b7ffcd273ef89}{GROSOR}} = 23;}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_control}{Control}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_control_aa7604677876d538d7d8d4320665839f3}{Control}}() = \textcolor{keywordflow}{default}; \mbox{\hyperlink{class_control_aa7604677876d538d7d8d4320665839f3}{Control}}(std::vector<VectorMenu>);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_acb70e7b42109f0885b352ab3b7389efb}{controlMenu}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_a58a64dc167d90cdef7965d669a46cf00}{comprobarUpDown}}(\textcolor{keywordtype}{size\_t}\& i, \textcolor{keywordtype}{bool}\& retflag);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_ae6d5087ae30f45228f6f9f3efa00e8d3}{mostrar}}(\textcolor{keywordtype}{size\_t});}
+\DoxyCodeLine{49     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_control_ad68deb552c17e89811a5a6b99cfb50e7}{comprobarMouse}}(\textcolor{keywordtype}{size\_t}*);}
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_control_a2fc3e77b475ab72a6db714a156cfcf65}{comprobarTecla}}(\textcolor{keywordtype}{int} vkey);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{keyword}{private}:}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     std::vector<VectorMenu> opciones\_Menu\_;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     HANDLE console\_; HWND console\_wnd = GetConsoleWindow();POINT cursor\_pos;}
+\DoxyCodeLine{64     std::vector<int> listaPosiciones;}
+\DoxyCodeLine{65 \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_acb70e7b42109f0885b352ab3b7389efb}{Control::controlMenu}}()}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69     \textcolor{keywordflow}{if} (opciones\_Menu\_.empty())}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0, j; i < opciones\_Menu\_.size(); i++, j++)}
+\DoxyCodeLine{73     \{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{if} (i == 0) \{}
+\DoxyCodeLine{75             listaPosiciones.push\_back(\mbox{\hyperlink{_control_8h_afc5adfdd2cbcde08501799b57231eb8a}{SUP\_DER}}); listaPosiciones.push\_back(\mbox{\hyperlink{_control_8h_afc5adfdd2cbcde08501799b57231eb8a}{SUP\_DER}} + \mbox{\hyperlink{_control_8h_a1eef70502c9b6582ab2b7ffcd273ef89}{GROSOR}});}
+\DoxyCodeLine{76             j = 1;}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{79             listaPosiciones.push\_back(listaPosiciones.at(j -\/ 1) + 1); listaPosiciones.push\_back(listaPosiciones.at(j) + \mbox{\hyperlink{_control_8h_a1eef70502c9b6582ab2b7ffcd273ef89}{GROSOR}});}
+\DoxyCodeLine{80             j++;}
+\DoxyCodeLine{81         \}}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83     \mbox{\hyperlink{class_control_ae6d5087ae30f45228f6f9f3efa00e8d3}{mostrar}}(1);}
+\DoxyCodeLine{84     \textcolor{keywordtype}{size\_t} i\{ 1 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{bool} retflag;}
+\DoxyCodeLine{87     \mbox{\hyperlink{class_control_a58a64dc167d90cdef7965d669a46cf00}{comprobarUpDown}}(i, retflag);}
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (retflag) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{89 \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_control_ad68deb552c17e89811a5a6b99cfb50e7}{Control::comprobarMouse}}(\textcolor{keywordtype}{size\_t}* i) \{}
+\DoxyCodeLine{92     \textcolor{keywordflow}{if} (GetCursorPos(\&cursor\_pos))}
+\DoxyCodeLine{93     \{}
+\DoxyCodeLine{94         \textcolor{keywordflow}{if} (console\_wnd \&\& ScreenToClient(console\_wnd, \&cursor\_pos))}
+\DoxyCodeLine{95         \{}
+\DoxyCodeLine{96             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < listaPosiciones.size(); i += 2)}
+\DoxyCodeLine{97             \{}
+\DoxyCodeLine{98                 \textcolor{keywordflow}{if} (cursor\_pos.y >= listaPosiciones.at(i) \&\& cursor\_pos.y <= listaPosiciones.at(i + 1)) \{}
+\DoxyCodeLine{99                     Sleep(500);\mbox{\hyperlink{class_control_ae6d5087ae30f45228f6f9f3efa00e8d3}{mostrar}}((i / 2) + 1);}
+\DoxyCodeLine{100                     \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_RBUTTON)) \{}
+\DoxyCodeLine{101                         opciones\_Menu\_.at(((i / 2) + 1) -\/ 1).get\_fuction()(); \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{102                     \}}
+\DoxyCodeLine{103                 \}}
+\DoxyCodeLine{104             \}}
+\DoxyCodeLine{105             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107     \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_ae6d5087ae30f45228f6f9f3efa00e8d3}{Control::mostrar}}(\textcolor{keywordtype}{size\_t} option)}
+\DoxyCodeLine{112 \{}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{115     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{116     SetConsoleCursorPosition(console\_, \{ 0,0 \});}
+\DoxyCodeLine{117     std::cout << \textcolor{stringliteral}{"{}Damas Chinas"{}} << std::endl;}
+\DoxyCodeLine{118     \textcolor{keywordflow}{while} (i < opciones\_Menu\_.size())}
+\DoxyCodeLine{119     \{}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121         \textcolor{keywordflow}{if} (option == (i + 1))}
+\DoxyCodeLine{122         \{}
+\DoxyCodeLine{123             SetConsoleCursorPosition(console\_, \{ 22,short(i + 9) \});}
+\DoxyCodeLine{124             std::cout << \textcolor{stringliteral}{"{}-\/-\/>"{}} << opciones\_Menu\_[i].get\_title\_() << std::endl;}
+\DoxyCodeLine{125             SetConsoleTextAttribute(console\_, 15);}
+\DoxyCodeLine{126         \}}
+\DoxyCodeLine{127         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{128         \{}
+\DoxyCodeLine{129             SetConsoleCursorPosition(console\_, \{ 22,short(i + 9) \});}
+\DoxyCodeLine{130             std::cout << opciones\_Menu\_[i].get\_title\_() << std::endl;}
+\DoxyCodeLine{131         \}}
+\DoxyCodeLine{132         i++;}
+\DoxyCodeLine{133     \}}
+\DoxyCodeLine{134 \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_control_a2fc3e77b475ab72a6db714a156cfcf65}{Control::comprobarTecla}}(\textcolor{keywordtype}{int} vkey) \{}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} GetKeyState(vkey) < 0;}
+\DoxyCodeLine{138 \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \mbox{\hyperlink{class_control_aa7604677876d538d7d8d4320665839f3}{Control::Control}}(std::vector<VectorMenu> options) : opciones\_Menu\_(options)}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142     console\_ = GetStdHandle(STD\_OUTPUT\_HANDLE);}
+\DoxyCodeLine{143 \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_a58a64dc167d90cdef7965d669a46cf00}{Control::comprobarUpDown}}(\textcolor{keywordtype}{size\_t}\& i, \textcolor{keywordtype}{bool}\& retflag)}
+\DoxyCodeLine{146 \{}
+\DoxyCodeLine{147     retflag = \textcolor{keyword}{true};}
+\DoxyCodeLine{148     \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{149     \{}
+\DoxyCodeLine{150         \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_END)) \{ \textcolor{keywordflow}{break}; \}\textcolor{keywordflow}{if} (\mbox{\hyperlink{class_control_ad68deb552c17e89811a5a6b99cfb50e7}{comprobarMouse}}(\&i)) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{151         \textcolor{keywordflow}{if} (\_kbhit())}
+\DoxyCodeLine{152         \{}
+\DoxyCodeLine{153             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_control_a2fc3e77b475ab72a6db714a156cfcf65}{comprobarTecla}}(VK\_DOWN)) \{}
+\DoxyCodeLine{154                 i = (i < opciones\_Menu\_.size()) ? i += 1 : i = opciones\_Menu\_.size();}
+\DoxyCodeLine{155                 \mbox{\hyperlink{class_control_ae6d5087ae30f45228f6f9f3efa00e8d3}{mostrar}}(i);}
+\DoxyCodeLine{156             \}}
+\DoxyCodeLine{157             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_control_a2fc3e77b475ab72a6db714a156cfcf65}{comprobarTecla}}(VK\_UP))}
+\DoxyCodeLine{158             \{}
+\DoxyCodeLine{159                 i = (i > 1) ? i -\/= 1 : i = 1; \mbox{\hyperlink{class_control_ae6d5087ae30f45228f6f9f3efa00e8d3}{mostrar}}(i);}
+\DoxyCodeLine{160             \}}
+\DoxyCodeLine{161             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_control_a2fc3e77b475ab72a6db714a156cfcf65}{comprobarTecla}}(VK\_RETURN)) \{}
+\DoxyCodeLine{162                 system(\textcolor{stringliteral}{"{}cls"{}}); opciones\_Menu\_.at(i -\/ 1).get\_fuction()();}
+\DoxyCodeLine{163                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{164             \}}
+\DoxyCodeLine{165             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_control_a2fc3e77b475ab72a6db714a156cfcf65}{comprobarTecla}}(VK\_END))}
+\DoxyCodeLine{166                 exit(0);}
+\DoxyCodeLine{167         \}}
+\DoxyCodeLine{168     \}}
+\DoxyCodeLine{169     retflag = \textcolor{keyword}{false};}
+\DoxyCodeLine{170 \}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 }
+
+\end{DoxyCode}
